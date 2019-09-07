@@ -1,7 +1,13 @@
 //importing express
 const express = require('express');
 
+//helps you secure the express app
+const helmet = require('helmet');
+
 const server = express();
+
+//helps you secure the express app
+server.use(helmet());
 
 //parsing json
 server.use(express.json());
