@@ -10,3 +10,5 @@ server.use(express.json());
 server.use('/', (req, res) => {
   res.status(200).send('Welcome to Chef Portfolio - Build Week');
 });
+
+module.exports = server;
