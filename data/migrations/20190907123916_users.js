@@ -27,6 +27,10 @@ exports.up = function(knex) {
         .unsigned()
         .references("id")
         .inTable("chefs");
+      tbl
+        .text("recipe_img")
+        .unique()
+        .notNullable();
       tbl.text("ingredients", 1000).notNullable();
       tbl.text("instructions", 1500).notNullable();
     });
