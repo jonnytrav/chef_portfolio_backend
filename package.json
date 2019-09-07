@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Build-week-Chef-portfolio-WebPT5/chef_portfolio_backend/issues"
   },
-  "homepage": "https://github.com/Build-week-Chef-portfolio-WebPT5/chef_portfolio_backend#readme"
+  "homepage": "https://github.com/Build-week-Chef-portfolio-WebPT5/chef_portfolio_backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
 }
