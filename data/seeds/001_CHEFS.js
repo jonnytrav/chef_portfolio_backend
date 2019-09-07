@@ -7,6 +7,8 @@ exports.seed = function(knex) {
       return knex("chefs").insert([
         {
           id: 1,
+          username: "hassannn",
+          password: "password",
           name: "Chef Hassan",
           city: "Charlotte",
           state: "NC",
@@ -14,6 +16,8 @@ exports.seed = function(knex) {
         },
         {
           id: 2,
+          username: "jonnn",
+          password: "password",
           name: "Jon Traverso",
           city: "Rock Hill",
           state: "SC",

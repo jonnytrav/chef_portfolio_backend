@@ -3,6 +3,11 @@ exports.up = function(knex) {
     .createTable("chefs", tbl => {
       tbl.increments();
       tbl
+        .text("username", 32)
+        .notNullable()
+        .unique();
+      tbl.text("password").notNullable();
+      tbl
         .text("name", 32)
         .notNullable()
         .unique();
