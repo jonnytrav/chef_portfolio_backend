@@ -1,0 +1,2 @@
+//prevent node modules from being push to github
+node_modules
