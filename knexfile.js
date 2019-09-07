@@ -4,7 +4,7 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       //update to location and db name
-      filename: './user.sqlite3'
+      filename: './data/users.sqlite3'
     },
     //add useNullAsDefault
     useNullAsDefault: true,
