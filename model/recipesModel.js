@@ -1,14 +1,16 @@
-const db = require('../data/db-config');
+const DB = require("../data/db-config");
 
 module.exports = {
-  find,
+  getChefRecipes,
   findById,
   add,
   update,
   remove
 };
 
-function find() {}
+function getChefRecipes(id) {
+  return DB("recipes").where("chef_id", "=", `${id}`);
+}
 
 function findById(id) {}
 
