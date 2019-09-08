@@ -25,4 +25,16 @@ router.post("/", (req, res) => {
     });
 });
 
+//UPDATES CHEFS' ACCOUNT INFO.. RETURNS NUMBER OF ROWS UPDATED
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedInfo = req.body;
+  try {
+    const update = await DB.updateChef(id, updatedInfo);
+    res.status(200).json(update);
+  } catch (err) {
+    res.status(400).json(err.message);
+  }
+});
+
 module.exports = router;
