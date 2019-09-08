@@ -46,7 +46,7 @@ router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     await DB.deleteChef(id);
-    res.status(204).json({ success: true });
+    res.status(204);
   } catch (err) {
     res.status(400).json(err.message);
   }
