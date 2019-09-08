@@ -3,7 +3,8 @@ const DB = require("../data/db-config.js");
 module.exports = {
   findChef,
   createChef,
-  updateChef
+  updateChef,
+  deleteChef
 };
 
 function findChef(id) {
@@ -20,4 +21,10 @@ function updateChef(id, newData) {
   return DB("chefs")
     .where({ id })
     .update(newData);
+}
+
+function deleteChef(chefId) {
+  return DB("chefs")
+    .where("id", "=", `${chefId}`)
+    .del();
 }

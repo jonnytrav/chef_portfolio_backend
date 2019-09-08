@@ -6,7 +6,11 @@ router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const chef = await DB.findChef(id);
-    res.status(200).json(chef);
+    if (chef) {
+      res.status(200).json(chef);
+    } else {
+      res.status(404).json({ message: "No account associated with this ID." });
+    }
   } catch (err) {
     res.status(400).json(err.message);
   }
@@ -32,6 +36,17 @@ router.put("/:id", async (req, res) => {
   try {
     const update = await DB.updateChef(id, updatedInfo);
     res.status(200).json(update);
+  } catch (err) {
+    res.status(400).json(err.message);
+  }
+});
+
+//DELETES CHEF FROM DATABASE USING ID
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await DB.deleteChef(id);
+    res.status(204).json({ success: true });
   } catch (err) {
     res.status(400).json(err.message);
   }
