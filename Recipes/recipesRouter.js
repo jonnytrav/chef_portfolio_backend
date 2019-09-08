@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const DB = require(".././model/recipesModel.js");
+const DB = require("./recipesModel.js");
 
 router.get("/:id", async (req, res) => {
   const id = req.params.id;
