@@ -7,6 +7,8 @@ exports.seed = function(knex) {
       return knex("recipes").insert([
         {
           id: 1,
+          title: "Cheezy mac",
+          meal_type: "dinner",
           chef_id: 1,
           recipe_img: "../photos/macNchz.jpg",
           ingredients:

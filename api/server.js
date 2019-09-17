@@ -13,12 +13,14 @@ server.use(helmet());
 server.use(express.json());
 
 //IMPORT ROUTES IN THIS SECTION
-const recipesRouter = require("../Routers/recipesRouter.js");
+const recipesRouter = require("../Recipes/recipesRouter.js");
+const chefsRouter = require("../Chefs/chefsRouter.js");
 
 //
 //IMPLEMENTING ROUTES
 //Syntax example - just uncomment and customized
 server.use("/api/recipes", recipesRouter);
+server.use("/api/chefs", chefsRouter);
 
 //root page
 server.use("/", (req, res) => {

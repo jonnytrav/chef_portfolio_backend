@@ -21,6 +21,8 @@ exports.up = function(knex) {
     })
     .createTable("recipes", tbl => {
       tbl.increments();
+      tbl.text("title", 56).notNullable();
+      tbl.text("meal_type", 32).notNullable();
       tbl
         .integer("chef_id")
         .notNullable()
